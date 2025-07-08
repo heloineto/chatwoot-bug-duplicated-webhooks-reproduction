@@ -6,8 +6,6 @@ dotenv.config({ quiet: true });
 
 const environment = z
   .object({
-    CHATWOOT_API_URL: z.string(),
-    CHATWOOT_API_TOKEN: z.string(),
     PORT: z.number({ coerce: true }).default(3000),
   })
   .parse(process.env);
