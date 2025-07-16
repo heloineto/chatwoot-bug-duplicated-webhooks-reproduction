@@ -34,6 +34,8 @@ app.post("/webhook", (req, res) => {
     }
     console.log(`content=${message.content}\nid=${message.id}`);
   }
+
+  res.sendStatus(200);
 });
 
 app.listen(environment.PORT, () => {
